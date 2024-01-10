@@ -690,6 +690,9 @@ pre code {
         max-width: 960px
     }
 }
+.container1{
+    max-width: 100%;
+}
 
 @media (min-width:1200px) {
     .container {
