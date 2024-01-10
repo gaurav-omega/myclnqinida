@@ -56,7 +56,7 @@ body{
 }
 .pro-features {
 	position: fixed;
-	right: -300px;
+	left: -300px;
 	width: 300px;
 	height: auto;
 	line-height: 46px;
@@ -75,30 +75,16 @@ body{
 	transition:all 0.4s ease;
 }
 @media only screen and (max-width: 992px) {
+
 	.pro-features{
-		position: fixed;
-	right: -300px;
-	width: 300px;
-	height: auto;
-	line-height: 46px;
-	font-size: 14px;
-	background: #fff;
-	text-align: left;
-	color: #333;
-	top: 50%;
-	transform:translateY(-50%);
-	box-shadow: -4px 0px 5px #00000036;
-	color: #fff;
-	z-index: 9999;
-	padding:20px 30px 30px 30px;
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	transition:all 0.4s ease;
+		top: 50%;
 	}
 	
   }
+
+
 .pro-features.active{
-	right:0;
+	left:0;
 }
 .pro-features li.big-title {
 	font-weight: 600;
@@ -120,7 +106,7 @@ body{
 	text-align: center;
 	margin-top: 8px;
 	display: inline-block;
-	float: left;
+	float: right;
 	font-size: 13px;
 	width: 100%;
 	text-transform: capitalize;
@@ -134,18 +120,18 @@ body{
 }
 .get-pro {
 	position: absolute;
-	left: -11rem;
+	left: 18.75rem;
 	width:11rem;
 	height: 45px;
 	line-height: 45px;
 	font-size: 14px;
-	border-radius: 5px 0 0 5px;
+	border-radius: 0px 5px 5px 0px;
 	background: #FF3C3C;
 	text-align: center;
 	color: #fff;
 	top: 0;
 	cursor: pointer;
-	box-shadow: -4px 0px 5px #00000036;
+	box-shadow: 4px 0px 5px #00000036;
 }
 .get-pro:hover{
 	
@@ -1863,7 +1849,11 @@ body{
 	position:relative;
 }
 .clients .single-clients{
-	
+	object-fit: cover;
+	overflow: hidden;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
 }
 .clients .single-clients img {
 	width: 100%;

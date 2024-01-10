@@ -9,12 +9,19 @@ function validateEmail(user_email) {
   return re.test(String(user_email).toLowerCase());
 }
 
+let selectedOption;
+
+document.querySelector('.nice-select .list').addEventListener('click', function (event) {
+    selectedOption = event.target.getAttribute('data-value');
+});
 document.getElementById("appointmentForm").addEventListener("submit", function (event) {
   console.log("button clicked ");
   event.preventDefault();
 
-  var consultationType = document.getElementById('consultationType').value;
-
+  if (selectedOption === null || selectedOption === undefined) {
+    alert("Please Select Consultation Type")
+    return; 
+}
 
   var emailValid = validateEmail(document.getElementById("user_email").value);
 
@@ -34,7 +41,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
     phone_number: document.getElementById("phone_number").value,
     user_message: document.getElementById("user_message").value,
     appointment_date: document.getElementById("datepicker").value,
-    consultaionType: consultationType,
+    consultaionType: selectedOption,
     // "g-recaptcha-response": captchaToken,
   };
 
